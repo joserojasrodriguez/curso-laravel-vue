@@ -11,21 +11,19 @@ class ProductController extends Controller
     {
         $data = [];
         $param = $request->input('query');
-        $products = Product::query()->where('name', 'LIKE', '%' . $param . '%')
+        $products = Product::query()->where('name', 'LIKE', '%'.$param.'%')
             ->take(10)
             ->get();
-
 
         foreach ($products as $product) {
             $data[] = [
                 'id'    => $product->id,
                 'name'  => $product->name,
                 'text'  => $product->name,
-                'price' => $product->price
+                'price' => $product->price,
             ];
         }
 
         return response()->json($data);
-
     }
 }

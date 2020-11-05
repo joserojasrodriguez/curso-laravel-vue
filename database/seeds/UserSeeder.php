@@ -14,11 +14,11 @@ class UserSeeder extends Seeder
         \App\User::create([
             'name'     => 'Jose Antonio',
             'email'    => 'jose@gmail',
-            'password' => bcrypt('secret')
+            'password' => bcrypt('secret'),
         ]);
 
         factory(\App\User::class, 1)->create([
-            'email' => 'jose2@gmail.com'
+            'email' => 'jose2@gmail.com',
         ]);
     }
 }

@@ -19,10 +19,10 @@ class CreateInvoiceLinesTable extends Migration
             $table->foreignId('product_id');
             $table->string('name', 75);
             $table->string('description', 255);
-            $table->double('quantity',10,2);
-            $table->double('price',10,2);
-            $table->double('discount',10,2);
-            $table->double('total',10,2);
+            $table->double('quantity', 10, 2);
+            $table->double('price', 10, 2);
+            $table->double('discount', 10, 2);
+            $table->double('total', 10, 2);
             $table->timestamps();
         });
     }
