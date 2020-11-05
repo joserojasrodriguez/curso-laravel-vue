@@ -15,5 +15,4 @@ class Invoice extends Model
     {
         return $this->hasMany(InvoiceLine::class);
     }
-
 }
